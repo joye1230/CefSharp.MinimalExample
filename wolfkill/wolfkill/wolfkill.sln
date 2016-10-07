@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "wolfkill", "wolfkill\wolfkill.vdproj", "{19D3BD38-84A4-4B26-AA9D-6C3E31E53211}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19D3BD38-84A4-4B26-AA9D-6C3E31E53211}.Debug|Default.ActiveCfg = Debug
+		{19D3BD38-84A4-4B26-AA9D-6C3E31E53211}.Debug|Default.Build.0 = Debug
+		{19D3BD38-84A4-4B26-AA9D-6C3E31E53211}.Release|Default.ActiveCfg = Release
+		{19D3BD38-84A4-4B26-AA9D-6C3E31E53211}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
