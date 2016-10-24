@@ -1,4 +1,5 @@
-﻿namespace CefSharp.MinimalExample.WinForms
+﻿
+namespace CefSharp.MinimalExample.WinForms
 {
     partial class BrowserForm
     {
@@ -30,10 +31,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BrowserForm));
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
-            this.statusLabel = new System.Windows.Forms.Label();
-            this.outputLabel = new System.Windows.Forms.Label();
+            this.shunwang = new System.Windows.Forms.PictureBox();
             this.toolStripContainer.ContentPanel.SuspendLayout();
             this.toolStripContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shunwang)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripContainer
@@ -41,50 +42,43 @@
             // 
             // toolStripContainer.ContentPanel
             // 
-            this.toolStripContainer.ContentPanel.Controls.Add(this.statusLabel);
-            this.toolStripContainer.ContentPanel.Controls.Add(this.outputLabel);
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(984, 686);
+            this.toolStripContainer.ContentPanel.Controls.Add(this.shunwang);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1003, 560);
+            this.toolStripContainer.ContentPanel.Load += new System.EventHandler(this.toolStripContainer_ContentPanel_Load);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer.LeftToolStripPanelVisible = false;
             this.toolStripContainer.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer.Margin = new System.Windows.Forms.Padding(1);
             this.toolStripContainer.Name = "toolStripContainer";
             this.toolStripContainer.RightToolStripPanelVisible = false;
-            this.toolStripContainer.Size = new System.Drawing.Size(984, 711);
+            this.toolStripContainer.Size = new System.Drawing.Size(1003, 585);
             this.toolStripContainer.TabIndex = 0;
             this.toolStripContainer.Text = "toolStripContainer1";
             // 
-            // statusLabel
+            // shunwang
             // 
-            this.statusLabel.AutoSize = true;
-            this.statusLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusLabel.Location = new System.Drawing.Point(0, 662);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(0, 12);
-            this.statusLabel.TabIndex = 1;
-            // 
-            // outputLabel
-            // 
-            this.outputLabel.AutoSize = true;
-            this.outputLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.outputLabel.Location = new System.Drawing.Point(0, 674);
-            this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(0, 12);
-            this.outputLabel.TabIndex = 0;
+            this.shunwang.Image = global::killWolf.Properties.Resources.banner1;
+            this.shunwang.Location = new System.Drawing.Point(182, 496);
+            this.shunwang.Name = "shunwang";
+            this.shunwang.Size = new System.Drawing.Size(677, 80);
+            this.shunwang.TabIndex = 0;
+            this.shunwang.TabStop = false;
+            this.shunwang.Click += new System.EventHandler(this.shunwang_Click);
             // 
             // BrowserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 711);
+            this.ClientSize = new System.Drawing.Size(1003, 585);
             this.Controls.Add(this.toolStripContainer);
+            this.ForeColor = System.Drawing.Color.Cornsilk;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BrowserForm";
-            this.Text = "BrowserForm";
             this.Load += new System.EventHandler(this.BrowserForm_Load);
             this.toolStripContainer.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer.ContentPanel.PerformLayout();
             this.toolStripContainer.ResumeLayout(false);
             this.toolStripContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.shunwang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,8 +86,6 @@
         #endregion
 
         private System.Windows.Forms.ToolStripContainer toolStripContainer;
-        private System.Windows.Forms.Label outputLabel;
-        private System.Windows.Forms.Label statusLabel;
-
+        private System.Windows.Forms.PictureBox shunwang;
     }
 }

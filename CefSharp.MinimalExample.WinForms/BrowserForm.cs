@@ -20,17 +20,30 @@ namespace CefSharp.MinimalExample.WinForms
             this.skinEngine1.SkinFile = Application.StartupPath + "//Skins//wolf_kill.ssk";
             Text = "狼人传说";
             //WindowState = FormWindowState.Maximized;
+            Size = new System.Drawing.Size(1019, 624);
 
-           
             browser = new ChromiumWebBrowser("http://121.40.64.66:8081/Web/login.php")
             {
                 Dock = DockStyle.Fill,
-                
+
             };
+            browser.AddressChanged += AddressChangedHandler;
+            Control.CheckForIllegalCrossThreadCalls = false;
             toolStripContainer.ContentPanel.Controls.Add(browser);
         }
 
+        // 地址变化回调函数
+        void AddressChangedHandler(object sender, AddressChangedEventArgs e)
+        {
+            int result = String.Compare("http://121.40.64.66:8081/Web/login.php", browser.Address);
 
+            if (result != 0)  // 不是登陆
+            {
+                Size = new System.Drawing.Size(1019, 1019);
+                Control shunwang = Controls.Find("shunwang", true)[0];
+                shunwang.Visible = false;
+            }
+        }
 
         private void LoadUrl(string url)
         {
@@ -41,6 +54,16 @@ namespace CefSharp.MinimalExample.WinForms
         }
 
         private void BrowserForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void shunwang_Click(object sender, EventArgs e)
         {
 
         }
